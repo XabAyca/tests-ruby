@@ -13,7 +13,7 @@ describe "temperature conversion functions" do
     end
 
     it "converts body temperature" do
-      expect(ftoc(98.6)).to eq(37)
+      expect(ftoc(98.6)).to be_within(0.1).of(37)
     end
 
     it "converts arbitrary temperature" do
@@ -40,7 +40,7 @@ describe "temperature conversion functions" do
       expect(ctof(37)).to be_within(0.1).of(98.6)
       # Why do we need to use be_within?
       # See http://www.ruby-forum.com/topic/169330
-      # and http://en.wikipedia.org/wiki/IEEE_754-2008
+      # and http://en.wikipedia.org/wiki/IEEE_754   -2008
       # and http://en.wikipedia.org/wiki/Double_precision_floating-point_format
       # Also, try "puts 0.5 - 0.4 - 0.1" -- pretty crazy, right?
     end
