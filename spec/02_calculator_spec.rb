@@ -90,6 +90,6 @@ describe "#factorial" do
   end
 
   it "computes the factorial of 10" do
-    expect(factorial(1)).to eq(3628800)
+    expect(factorial(10)).to eq(3628800)
   end
 end
